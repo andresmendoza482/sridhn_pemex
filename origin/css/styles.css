@@ -1,0 +1,308 @@
+/* Fluid design by Trys Mudford  
+https://utopia.fyi
+*/
+/*************************** Normalize ***************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+  
+body {
+    margin: 0;
+}
+  
+main {
+    display: block;
+}
+  
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+  
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+  
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+  
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+  
+b,
+strong {
+    font-weight: bolder;
+}
+  
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+  
+small {
+    font-size: 80%;
+}
+  
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+  
+sub {
+    bottom: -0.25em;
+}
+  
+sup {
+    top: -0.5em;
+}
+  
+img {
+    border-style: none;
+}
+  
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+  
+button,
+input {
+    overflow: visible;
+}
+  
+button,
+select { 
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+  
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+  
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+  
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+  
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+  
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+  
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+  
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+  
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+  
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+  
+template {
+    display: none;
+}
+  
+[hidden] {
+    display: none;
+}
+
+/*************************** Styles ***************************/
+:root {
+    --primary-color: #621132;
+    --light-color: #f2f2f2;
+    --dark-color: #111;
+    --grey-color: #888;
+    --red-color: #920202;
+    --red-color-hover: #981712;
+    --green-color: #0a2516;
+    --green-color-hover: #193908;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Mukta";
+    src: url(../fonts/Mukta-Regular.ttf);
+}
+
+
+html {
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1400 - 300)));
+}
+
+/*************************** Header Styles ***************************/
+.header {
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-container {
+    padding: 1.2rem;
+}
+
+
+/*************************** Main Styles ***************************/
+
+.section__h1 {
+    text-align: center;
+    font-family: "Mukta", "Tahoma";
+}
+
+.section__form {
+    width: 75%;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px var(--grey-color);
+
+}
+
+.section__label {
+    font-family: "Mukta", "Tahoma";
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.section__input {
+    outline: none;
+    padding: 0.7rem;
+    font-family: "Montserrat";
+    width: 70%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--grey-color);
+}
+
+.section__submit {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    cursor: pointer;
+    width: 70%;
+    padding: 0.7rem;
+    font-family: "Montserrat";
+    border-radius: 10px;
+    border: 1px solid var(--grey-color);
+    transition: background-color 0.3s ease-in-out;
+}   
+
+.section--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*************************** Hover Styles ***************************/
+.section__submit:hover {
+    background-color: var(--primary-color);
+
+}
+
+
+/*************************** Media Queries ***************************/
+@media screen and (min-width: 40rem) {
+    .section__form {
+
+    }
+
+    .section__input {
+        
+    }
+
+    .section__submit {
+    
+    }
+}

@@ -1,8 +1,26 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
+        <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="Sooma">
+        <meta name="desctiption" content="Sistema SRIDHN">
+        <meta name="copyright" content="Pemex">
+        <meta name="keywords" content="sridhn, pemex">
+        <meta name="theme-color" content="#111">
+        <!-- OpenGraph protocol -->
+        <meta property="og:title" content="Login">
+        <meta property="og:description" content="Sistema SRIDHN">
+        <meta property="og:type" content="website"> 
+        <meta property="og:url" content="...">
+        <meta property="og:img" content="...">
+        <!-- Link tags -->
+        <link rel="stylesheet" type="text/css" href="./origin/css/styles.css">
+        <link rel="icon" href="./origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="./origin/multimedia/img/favicon.png">
+        <link rel="canonical" href="">
+        <script src="./origin/js/index.js" type="module" defer></script>
         <title>Login</title>
     </head>
     <body>
@@ -10,19 +28,23 @@
         <div class="container">
             <header class="header">
                 <div class="header-container">
-
+                    <h2> LOGO </h2>
                 </div>
             </header>
             <main class="main">
                 <div class="main-container">
-
+                    <div class="section section--flex">
+                        <h1 class="section__h1">Login</h1>
+                        <form class="section__form">
+                            <label class="section__label">Email:</label>
+                            <input class="section__input" type="email" required/>
+                            <label class="section__label">Contraseña:</label>
+                            <input class="section__input" type="password" required/>
+                            <input class="section__submit" type="submit" value="Ingresar"/>
+                        </form>
+                    </div>
                 </div>
             </main>
-            <footer class="footer">
-                <div class="footer-container">
-
-                </div>
-            </footer>
         </div>
     </body>
 </html>
