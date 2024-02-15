@@ -195,7 +195,7 @@ template {
     --light-color: #f2f2f2;
     --dark-color: #111;
     --grey-color: #888;
-    --red-color: #920202;
+    --red-color: #ff0000;
     --red-color-hover: #981712;
     --green-color: #0a2516;
     --green-color-hover: #193908;
@@ -227,10 +227,24 @@ html {
 
 .header-container {
     padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.header-container__logo {
+    cursor: pointer;
+    width: 10rem;
+}
 
 /*************************** Main Styles ***************************/
+.section--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 .section__h1 {
     text-align: center;
@@ -277,13 +291,18 @@ html {
     transition: background-color 0.3s ease-in-out;
 }   
 
-.section--flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.section__error {
+    visibility: hidden;
+    font-family: "Montserrat";
+    color: var(--red-color);
+    margin-top: -1.8rem;
+    margin-bottom: 2rem;
 }
+
+.is-active {
+    visibility: visible;
+}
+
 
 /*************************** Hover Styles ***************************/
 .section__submit:hover {
@@ -293,9 +312,9 @@ html {
 
 
 /*************************** Media Queries ***************************/
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 32rem) {
     .section__form {
-
+        width: 60%;
     }
 
     .section__input {
@@ -305,4 +324,25 @@ html {
     .section__submit {
     
     }
+}
+
+@media screen and (min-width: 62rem) {
+    .header-container {
+        justify-content: left;
+    }
+
+
+    .section__form {
+        width: 50%;
+    }
+
+    .section__input {
+        width: 60%;    
+    }
+
+    .section__submit {
+        width: 60%;
+    }
+
+
 }

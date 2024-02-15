@@ -28,18 +28,19 @@
         <div class="container">
             <header class="header">
                 <div class="header-container">
-                    <h2> LOGO </h2>
+                    <img class="header-container__logo" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">                      
                 </div>
             </header>
             <main class="main">
                 <div class="main-container">
                     <div class="section section--flex">
                         <h1 class="section__h1">Login</h1>
-                        <form class="section__form">
+                        <form class="section__form" autocomplete="off">
                             <label class="section__label">Email:</label>
-                            <input class="section__input" type="email" required/>
+                            <input class="section__input" name="email" type="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="" data-error="Formato de correo no valido" required/>
+                            <span class="section__error">Formato de correo no valido</span>
                             <label class="section__label">Contraseña:</label>
-                            <input class="section__input" type="password" required/>
+                            <input class="section__input" name="password" type="password" title="" required/>
                             <input class="section__submit" type="submit" value="Ingresar"/>
                         </form>
                     </div>
@@ -48,3 +49,4 @@
         </div>
     </body>
 </html>
+
