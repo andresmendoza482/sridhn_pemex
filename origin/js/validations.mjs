@@ -1,7 +1,6 @@
 const $form = document.querySelector(".section__form");
 const $input = document.querySelectorAll(".section__input");
 
-//FALTA VALIDACION DE SI EL INPUT TIENE EL ATRIBUTO REQUIRED ENTONCES NO GENERE MENSAJE "NO PUEDES DEJAR ESPACIOS VACIOS"
 const loginValidations = () => {
     if($form) {//Si existe un formulario ejecuta la siguiente programación.
         for(let i = 0; i < $input.length; i++) {//Generación de mensajes de validación por cada input.
