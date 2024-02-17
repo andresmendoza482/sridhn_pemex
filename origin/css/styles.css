@@ -252,6 +252,7 @@ html {
     padding-top: 5.5rem;
     padding-bottom: 2.5rem;
     transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 .header-container__btn {
@@ -369,6 +370,53 @@ html {
     margin-bottom: 2rem;
 }
 
+/*************************** Modal Styles ***************************/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal-container {
+    background-color: var(--light-color);
+    width: 75%;
+    min-height: 40vh;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container__h2 {
+    text-align: center;
+    font-family: "Mukta", "Tahoma";
+    margin-bottom: 3rem;
+}
+
+.modal-container__btn {
+    padding: 0.7rem;
+    width: 70%;
+    margin-bottom: 1.5rem;
+    font-family: "Montserrat", "Tahoma";
+    background-color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+}
+
+.modal-container__btn--acent {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
 .is-active {
     visibility: visible;
 }
@@ -392,7 +440,8 @@ html {
 
 
 /*************************** Hover Styles ***************************/
-.section__submit:hover {
+.section__submit:hover,
+.modal-container__btn--acent:hover {
     background-color: var(--primary-color);
 
 }
@@ -406,14 +455,6 @@ html {
 
     .section__form {
         width: 60%;
-    }
-
-    .section__input {
-        
-    }
-
-    .section__submit {
-    
     }
 }
 
