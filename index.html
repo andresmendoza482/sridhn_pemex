@@ -25,25 +25,19 @@
     </head>
     <body>
         <noscript><h2>Es necesario que tengas habilitado JavaScript en tu navegador para acceder a esta página.</h2></noscript>
-        <div class="container">
-            <header class="header">
-                <div class="header-container">
-                    <img class="header-container__logo" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">                      
-                </div>
+        <div class="root">
+            <header class="primary-color w-full p-3">
+                <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">                      
             </header>
-            <main class="main">
-                <div class="main-container">
-                    <div class="section section--flex">
-                        <h1 class="section__h1">Login</h1>
-                        <form class="section__form" autocomplete="off">
-                            <label class="section__label">Email:</label>
-                            <input class="section__input" name="email" type="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="" data-error="Formato de correo no valido" required/>
-                            <label class="section__label">Contraseña:</label>
-                            <input class="section__input" name="password" type="password" title="" required/>
-                            <input class="section__submit" type="submit" value="Ingresar"/>
-                        </form>
-                    </div>
-                </div>
+            <main class="main h-screen flex flex-col justify-center items-center">
+                <h1 class="text-5xl">Login</h1>
+                <form class="form-login w-3/4 p-8 flex flex-col justify-center items-center rounded-xl box-shadow sm:w-2/4" autocomplete="off">
+                    <label class="form-login__label mb-2 font-bold">Email:</label>
+                    <input class="form-login__input-text w-3/4 mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" name="email" type="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="" data-error="Formato de correo no valido" required/>
+                    <label class="form-login__label mb-2 font-bold">Contraseña:</label>
+                    <input class="form-login__input-text w-3/4 mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" name="password" type="password" title="" required/>
+                    <input class="form-login__submit w-3/4 p-3 rounded-xl bg-slate-900 text-slate-50 cursor-pointer sm:w-7/12" type="submit" value="Ingresar"/>
+                </form>
             </main>
         </div>
     </body>

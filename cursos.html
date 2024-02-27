@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./origin/css/styles.css">
+        <link rel="canonical" href="">
+        <link rel="icon" href="./origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="./origin/multimedia/img/favicon.png">
+        <script src="./origin/js/index.js" type="module" defer></script>
+        <title>Cursos</title>
+    </head>
+    <body>
+        <noscript><h2>Es necesario que tengas habilitado JavaScript en tu navegador para acceder a esta página</h2></noscript>
+        <div class="root">
+            <header class="primary-color p-3 flex justify-between fixed top-0 left-0 w-full">
+                <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
+
+                <!--MOBILE
+                    <button class="">X</button>
+                    <nav class="nav-header primary-color p-10 fixed top-0 right-0 w-3/4 h-screen flex flex-col justify-between translate-x-full">
+                        <div class="nav-header__links flex flex-col justify-center items-center">
+                            <span class="nav-header__text text-slate-50 text-2xl">Usuario:</span>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full text-center" href="#">Andres Mendoza</a>
+                            <span class="nav-header__text text-slate-50 text-2xl">Secciones:</span>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Seguimiento</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Cursos</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Personal</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Subir</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Check in</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Integración</a>
+                            <a class="nav-header__link p-4 text-xl text-slate-50 w-full" href="#">Reclutamiento</a>
+                        </div>
+                        <button class="nav-header__logout text-slate-50">Log out</button>
+                    </nav>
+
+
+                -->
+            </header>
+            <main class="main pt-24">
+                <form class="form-filter border-b-1" autocomplete="off">
+                    <div class="flex flex-wrap">
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Encontrar:</label>
+                            <input class="form-filter__input-text w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" type="text" name="found">
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Fecha de inicio:</label>
+                            <input class="form-filter__input-date w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" type="date" name="start">
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Fecha de termino:</label>
+                            <input class="form-filter__input-date w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" type="date" name="end">
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">ADH:</label>
+                            <select class="form-filter__select w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" name="adh">
+                                <option class="form-filter__option" value="">Elige una opción</option>
+                                <option class="form-filter__option" value=""></option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Empresa:</label>
+                            <select class="form-filter__select w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" name="company">
+                                <option class="form-filter__option" value="">Elige una opción</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Gerencia:</label>
+                            <select class="form-filter__select w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" name="">
+                                <option class="form-filter__option" value="">Elige una opción</option>
+        
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-1/2 items-center md:w-1/3">
+                            <label class="form-filter__label mb-2 font-bold">Filtro:</label>
+                            <select class="form-filter__select w-10/12 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl" name="filter">
+                                <option class="form-filter__option" value="">Elige una opción</option>
+                                <option class="form-filter__option" value="">Mostrar planeados SRIDHN</option>
+                                <option class="form-filter__option" value="">Mostrar fijados SRIDHN</option>
+                                <option class="form-filter__option" value="">Mostrar historiados SRIDHN</option>
+                                <option class="form-filter__option" value="">Mostrar historiados SAP</option>
+                                <option class="form-filter__option" value="">Mostrar solo picade</option>
+                                <option class="form-filter__option" value="">Mostrar planeados ADH</option>
+                                <option class="form-filter__option" value="">Mostrar fijados ADH</option>
+                                <option class="form-filter__option" value="">Mostrar historiados ADH</option>
+                                <option class="form-filter__option" value="">Mostrar fijados SAP</option>
+                                <option class="form-filter__option" value="">Mostrar solo adicionales</option>
+                                <option class="form-filter__option" value="">Mostrar solo devueltos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                            <input class="form-filter__submit w-5/12 p-3 mb-8 text-slate-50 bg-slate-900 rounded-xl cursor-pointer md:w-4/12" type="submit" value="Buscar">
+                            <input class="form-filter__clear w-5/12 p-3 mb-8 border-1 border-gray-500 rounded-xl cursor-pointer md:w-4/12" type="button" value="Limpiar">
+                    </div>
+                </form>
+
+                <div class="courses min-h-screen">
+
+                </div>
+
+                <div class="modal fixed top-0 left-0 w-full h-screen bg-modal flex justify-center items-center invisible">
+                    <div class="modal-container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
+                        <h2 class="modal-container__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
+                        <button class="modal-container__btn w-3/4 p-3 mb-8 rounded-xl bg-slate-900 text-slate-50 outline-none sm:w-7/12">Cerrar</button>
+                        <button class="modal-container__btn w-3/4 p-3 rounded-xl border-1 border-gray-500 cursor-pointer sm:w-7/12">Cancelar</button>
+                    </div>
+                </div>
+            </main>
+            <footer class="primary-color w-full p-5">
+                <p class="text-center text-slate-50">Sistema creado para Pemex©.</p>
+            </footer>
+        </div>
+    </body>
+</html>

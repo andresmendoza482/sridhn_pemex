@@ -1,7 +1,13 @@
 /* Fluid design by Trys Mudford  
 https://utopia.fyi
 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*************************** Normalize ***************************/
+
 * {
     margin: 0;
     padding: 0;
@@ -193,6 +199,7 @@ template {
 :root {
     --primary-color: #621132;
     --light-color: #f2f2f2;
+    --bone-color: #ffffcf;
     --dark-color: #111;
     --grey-color: #888;
     --red-color: #ff0000;
@@ -211,158 +218,30 @@ template {
     src: url(../fonts/Mukta-Regular.ttf);
 }
 
+h1, h2 {
+    font-family: "Mukta", "Tahoma";
+}
+
+label, p, span, input, select {
+    font-family: "Montserrat", "Tahoma";
+}
 
 html {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1400 - 300)));
 }
 
-
-/*************************** Header Styles ***************************/
-.header {
-    width: 100%;
+/*************************** Header ***************************/
+.primary-color {
     background-color: var(--primary-color);
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
-.header-container {
-    padding: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/*************************** Login ***************************/
 
-.header-container__logo {
-    cursor: pointer;
-    width: 10rem;
-}
-
-.header-container__nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5.5rem;
-    padding-bottom: 2.5rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.header-container__btn {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-    font-family: "Montserrat", "Tahoma";
-    background-color: transparent;
-    color: var(--light-color);
-    border: none;
-    font-size: 2rem;
-    z-index: 999;
-}
-
-.header-container__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.header-container__a,
-.header-container__span {
-    color: var(--light-color);
+.form-login__input-text {
     font-family: "Montserrat", "Tahoma";
 }
 
-.header-container__a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1.3rem;
-    padding: 1rem;
-}
-
-.header-container__a--marbot {
-    margin-bottom: 2rem;
-}
-
-.header-container__logout {
-    color: var(--light-color);
-    font-family: "Montserrat";
-    background-color: transparent;
-    border: none;
-
-}
-
-.is-visible {
-    transform: translateX(0);
-}
-
-/*************************** Main Styles ***************************/
-.main { /* POR MIENTRAS */
-    min-height: 100vh;
-}
-
-.section--flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.section__h1 {
-    text-align: center;
-    font-family: "Mukta", "Tahoma";
-}
-
-.section__form {
-    width: 75%;
-    border-radius: 10px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 5px 0px var(--grey-color);
-
-}
-
-.section__label {
-    font-family: "Mukta", "Tahoma";
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.section__input {
-    outline: none;
-    padding: 0.7rem;
-    font-family: "Montserrat";
-    width: 70%;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    border: 1px solid var(--grey-color);
-}
-
-.section__submit {
-    color: var(--light-color);
-    background-color: var(--dark-color);
-    cursor: pointer;
-    width: 70%;
-    padding: 0.7rem;
-    font-family: "Montserrat";
-    border-radius: 10px;
-    border: 1px solid var(--grey-color);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.section__error {
+.form-login__error {
     visibility: hidden;
     font-family: "Montserrat";
     color: var(--red-color);
@@ -370,106 +249,55 @@ html {
     margin-bottom: 2rem;
 }
 
-/*************************** Modal Styles ***************************/
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+/*************************** Utility classes extra ***************************/
+
+.box-shadow {/* Box shadow forms */
+    box-shadow: 0px 0px 15px 0px var(--grey-color); /**X, Y, intencidad, rango de sombra, color**/
+}
+
+.border-1 {/* Border 1 px */
+    border-width: 1px;
+}
+
+.border-b-1 {
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.bg-modal {
     background-color: rgba(1, 1, 1, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+/*
+
+.form-login__submit {
+    background-color: var(--primary-color);
+}
+
+*/
+
+/*************************** Media queries ***************************/
+@media screen and (min-width: 62rem) {
+
+}
+
+/*************************** Complements classes ***************************/
+.is-visible {
+    visibility: visible;
+    
+}
+
+.is-hidden {
     visibility: hidden;
 }
 
-.modal-container {
-    background-color: var(--light-color);
-    width: 75%;
-    min-height: 40vh;
-    padding: 2rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.is-display {
+    transform: translateX(0);
 }
 
-.modal-container__h2 {
-    text-align: center;
-    font-family: "Mukta", "Tahoma";
-    margin-bottom: 3rem;
+.is-none {
+    display: none;
 }
 
-.modal-container__btn {
-    padding: 0.7rem;
-    width: 70%;
-    margin-bottom: 1.5rem;
-    font-family: "Montserrat", "Tahoma";
-    background-color: var(--light-color);
-    border: 1px solid var(--dark-color);
-    border-radius: 10px;
-}
-
-.modal-container__btn--acent {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-}
-
-.is-active {
-    visibility: visible;
-}
-
-/*************************** Footer Styles ***************************/
-.footer {
-    width: 100%;
-    background-color: var(--primary-color);
-}
-
-.footer-container {
-    padding: 1.2rem;
-}
-
-.footer-container__p {
-    color: var(--light-color);
-    font-family: "Montserrat", "Tahoma";
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-
-/*************************** Hover Styles ***************************/
-.section__submit:hover,
-.modal-container__btn--acent:hover {
-    background-color: var(--primary-color);
-
-}
-
-
-/*************************** Media Queries ***************************/
-@media screen and (min-width: 32rem) {
-    .header-container {
-        justify-content: left;
-    }
-
-    .section__form {
-        width: 60%;
-    }
-}
-
-@media screen and (min-width: 62rem) {
-    .section__form {
-        width: 50%;
-    }
-
-    .section__input {
-        width: 60%;    
-    }
-
-    .section__submit {
-        width: 60%;
-    }
-
-
+.is-view {
+    display:block;
 }
