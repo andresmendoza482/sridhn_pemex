@@ -1,6 +1,8 @@
 const $nav = document.querySelector(".header-container__nav");
 const $btn = document.querySelector(".header-container__btn");
 
+//BOTON DE HAMBURGUESA
+
 const hamburguerBtn = () => {
     if($btn) {//Si existe el botón de hamburguesa ejecuta la siguiente programación.
         document.addEventListener("click", (event) => {

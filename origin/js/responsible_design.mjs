@@ -3,7 +3,6 @@
 
 const responsible = () => {
     if(matchMedia("(min-width: 32rem)").matches) {
-        console.log("ESTA SUCEDIENDO");
     }
 };
 

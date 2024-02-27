@@ -1,6 +1,8 @@
 const $form = document.querySelector(".form-login");
 const $input = document.querySelectorAll(".form-login__input-text");
 
+//VALIDACIONES DE FORMULARIOS
+
 const loginValidations = () => {
     if($form) {//Si existe un formulario ejecuta la siguiente programación.
         for(let i = 0; i < $input.length; i++) {//Generación de mensajes de validación por cada input.

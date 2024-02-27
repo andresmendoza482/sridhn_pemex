@@ -1,6 +1,8 @@
 const $modalLogout = document.querySelector(".modal");
 const $modalUser = document.querySelector(".header-container__user-menu");
 
+//PROGRAMACION DE MODALES
+
 const modal = () => {
     if ($modalLogout) {//Si existe una ventana modal ejecuta la siguiente programación.
         document.addEventListener("click", (event) => {
