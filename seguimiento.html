@@ -25,63 +25,77 @@
     </head>
     <body>
         <noscript><h2>Es necesario que tengas habilitado JavaScript en tu navegador para acceder a esta página.</h2></noscript>
-        <div class="container">
-            <header class="">
-                    <img class="" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
-                    
-                    <nav class="nav-desktop">
-                        <a class="header-container__a" href="#">Seguimiento</a>
-                        <a class="header-container__a" href="#">Cursor</a>
-                        <a class="header-container__a" href="#">Personal</a>
-                        <a class="header-container__a" href="#">Subir</a>
-                        <a class="header-container__a" href="#">Check in</a>
-                        <a class="header-container__a" href="#">Integración</a>
-                        <a class="header-container__a" href="#">Reclutamiento</a>
-                        <button class="header-container__user-btn">Andres Mendoza</button>
-                    </nav>
-                    <div class="user-menu">
-                        <p class="">Andres Mendoza</p>
-                        <button class="user-menu__logout">Log out</button>
-                    </div>
-                     
+        <div class="root">
+            <header class="primary-color p-3 flex justify-between fixed top-0 left-0 w-full">
+                <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
 
-
-                    <!--  MOBILE
-                    <button class="header-container__btn">X</button>
-                    <nav class="header-container__nav">
-                        <div class="header-container__links">
-                            <span class="header-container__span">Usuario:</span>
-                            <a class="header-container__a header-container__a--marbot" href="#">Andres Mendoza</a>
-                            <span class="header-container__span">Secciones:</span>
-                            <a class="header-container__a" href="#">Seguimiento</a>
-                            <a class="header-container__a" href="#">Cursos</a>
-                            <a class="header-container__a" href="#">Personal</a>
-                            <a class="header-container__a" href="#">Subir</a>
-                            <a class="header-container__a" href="#">Check in</a>
-                            <a class="header-container__a" href="#">Integración</a>
-                            <a class="header-container__a" href="#">Reclutamiento</a>
-                        </div>
-                        <button class="header-container__logout">Log out</button>
-                    </nav>
-                    -->
-
+                <nav class="flex justify-center items-center">
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Seguimiento</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Cursos</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Personal</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Subir</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Check in</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Integración</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Reclutamiento</a>
+                    <button class="text-slate-50">Andrés Mendoza</button>
+                </nav>
             </header>
-            <main class="main">
-                <div class="follow-up">
+            <main class="pt-16 min-h-screen">
+                <div class="min-h-screen">
+                    <h1 class="text-5xl font-bold text-center">Seguimiento</h1>
+                    <h2 class="text-3xl font-bold text-center">Seguimiento general:</h2>
+                    <select class="block ml-auto mr-auto mt-4 w-2/4 p-3 outline-none border-1 border-gray-500 rounded-xl md:w-3/12">
+                        <option value="">Elige una opción</option>
+                        <option value="">Todos</option>
+                        <option value="">ADH Activo Reynosa</option>
+                        <option value="">ADH Altamira</option>
+                        <option value="">ADH Cadereyta</option>
+                        <option value="">ADH CAN</option>
+                        <option value="">ADH Chihuaha</option>
+                        <option value="">ADH CPG Burgos</option>
+                        <option value="">ADH CPG Poza Rica</option>
+                        <option value="">ADH HRCM</option>
+                        <option value="">ADH HRPR</option>
+                        <option value="">ADH HRR</option>
+                        <option value="">ADH Madero</option>
+                        <option value="">ADH Monterrey</option>
+                        <option value="">ADH Poza Rica</option>
+                        <option value="">ADH San Rafael</option>
+                        <option value="">ADH TMM</option>
+                        <option value="">SRIDHN</option>
+                        <option value="">Cambiar a anual anterior</option>
+                    </select>
+                    <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
 
-                    <div class="modal">
-                        <div class="modal-container">
-                            <h2 class="modal-container__h2">¿Estás seguro de que quieres cerrar la sesión?</h2>
-                            <button class="modal-container__btn modal-container__btn--acent">Cerrar</button>
-                            <button class="modal-container__btn modal-container__btn--cancel">Cancelar</button>
-                        </div>
+                </div>
+                <h2 class="text-3xl font-bold text-center">Seguimiento por ADH:</h2>
+                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
+                <div class="min-h-screen">
+
+                </div>
+                <h2 class="text-3xl font-bold text-center">Seguimiento por punto de gestión:</h2>
+                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
+                <div class="min-h-screen">
+
+                </div>
+                <h2 class="text-3xl font-bold text-center">Tiempo medio por gestión:</h2>
+                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
+                <div class="min-h-screen">
+
+                </div>
+
+
+
+                <div class="modal fixed top-0 left-0 w-full h-screen bg-modal flex justify-center items-center invisible">
+                    <div class="modal-container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
+                        <h2 class="modal-container__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
+                        <button class="modal-container__btn w-3/4 p-3 mb-8 rounded-xl bg-slate-900 text-slate-50 outline-none sm:w-7/12">Cerrar</button>
+                        <button class="modal-container__btn w-3/4 p-3 rounded-xl border-1 border-gray-500 cursor-pointer sm:w-7/12">Cancelar</button>
                     </div>
                 </div>
             </main>
-            <footer class="footer">
-                <div class="footer-container">
-                    <p class="footer-container__p">Pemex©</p>
-                </div>
+            <footer class="primary-color w-full p-5">
+                <p class="text-center text-slate-50">Pemex©</p>
             </footer>
         </div>
     </body>
