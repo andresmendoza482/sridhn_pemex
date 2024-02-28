@@ -10,7 +10,6 @@ const formFilter = () => {
             if(element.matches(".form-filter__clear")) {
                 $formFilter.reset();
 
-                console.log("to flama");
             }
         });
     }

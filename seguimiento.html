@@ -30,8 +30,8 @@
                 <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
 
                 <nav class="flex justify-center items-center">
-                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Seguimiento</a>
-                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Cursos</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="./seguimiento.html">Seguimiento</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="./cursos.html">Cursos</a>
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Personal</a>
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Subir</a>
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Check in</a>
@@ -41,51 +41,48 @@
                 </nav>
             </header>
             <main class="pt-16 min-h-screen">
-                <div class="min-h-screen">
-                    <h1 class="text-5xl font-bold text-center">Seguimiento</h1>
-                    <h2 class="text-3xl font-bold text-center">Seguimiento general:</h2>
-                    <select class="block ml-auto mr-auto mt-4 w-2/4 p-3 outline-none border-1 border-gray-500 rounded-xl md:w-3/12">
-                        <option value="">Elige una opción</option>
-                        <option value="">Todos</option>
-                        <option value="">ADH Activo Reynosa</option>
-                        <option value="">ADH Altamira</option>
-                        <option value="">ADH Cadereyta</option>
-                        <option value="">ADH CAN</option>
-                        <option value="">ADH Chihuaha</option>
-                        <option value="">ADH CPG Burgos</option>
-                        <option value="">ADH CPG Poza Rica</option>
-                        <option value="">ADH HRCM</option>
-                        <option value="">ADH HRPR</option>
-                        <option value="">ADH HRR</option>
-                        <option value="">ADH Madero</option>
-                        <option value="">ADH Monterrey</option>
-                        <option value="">ADH Poza Rica</option>
-                        <option value="">ADH San Rafael</option>
-                        <option value="">ADH TMM</option>
-                        <option value="">SRIDHN</option>
-                        <option value="">Cambiar a anual anterior</option>
-                    </select>
-                    <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
+                <h1 class="text-5xl font-bold text-center">Seguimiento</h1>
+                <h2 class="text-3xl font-bold text-center">Seguimiento general:</h2>
+                <select class="block ml-auto mr-auto mt-4 w-2/4 p-3 outline-none border-1 border-gray-500 rounded-xl md:w-3/12">
+                    <option value="">Elige una opción</option>
+                    <option value="">Todos</option>
+                    <option value="">ADH Activo Reynosa</option>
+                    <option value="">ADH Altamira</option>
+                    <option value="">ADH Cadereyta</option>
+                    <option value="">ADH CAN</option>
+                    <option value="">ADH Chihuaha</option>
+                    <option value="">ADH CPG Burgos</option>
+                    <option value="">ADH CPG Poza Rica</option>
+                    <option value="">ADH HRCM</option>
+                    <option value="">ADH HRPR</option>
+                    <option value="">ADH HRR</option>
+                    <option value="">ADH Madero</option>
+                    <option value="">ADH Monterrey</option>
+                    <option value="">ADH Poza Rica</option>
+                    <option value="">ADH San Rafael</option>
+                    <option value="">ADH TMM</option>
+                    <option value="">SRIDHN</option>
+                    <option value="">Cambiar a anual anterior</option>
+                </select>
+                <button class="show-section-general block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
+                <div class="section-general min-h-screen">
 
                 </div>
                 <h2 class="text-3xl font-bold text-center">Seguimiento por ADH:</h2>
-                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
-                <div class="min-h-screen">
+                <button class="show-section-adh block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
+                <div class="section-adh min-h-screen">
 
                 </div>
                 <h2 class="text-3xl font-bold text-center">Seguimiento por punto de gestión:</h2>
-                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
-                <div class="min-h-screen">
+                <button class="show-section-managment block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
+                <div class="section-managment min-h-screen">
 
                 </div>
                 <h2 class="text-3xl font-bold text-center">Tiempo medio por gestión:</h2>
-                <button class="show- block ml-auto mr-auto mt-4 cursor-pointer font-bold hover:text-sky-700">Mostrar sección</button>
-                <div class="min-h-screen">
+                <button class="show-section-parttime block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
+                <div class="section-parttime min-h-screen">
 
                 </div>
-
-
-
                 <div class="modal fixed top-0 left-0 w-full h-screen bg-modal flex justify-center items-center invisible">
                     <div class="modal-container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
                         <h2 class="modal-container__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
