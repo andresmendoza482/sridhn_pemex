@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="keywords" content="">
+        <meta name="theme-color" content="">
+        <!-- Open Graph protocol -->
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="">
+        <meta property="og:url" content="">
+        <meta property="og:img" content="">
+        <!-- Link tags -->
         <link rel="stylesheet" type="text/css" href="./origin/css/styles.css">
         <link rel="canonical" href="">
         <link rel="icon" href="./origin/multimedia/img/favicon.png">
         <link rel="apple-touch-icon" href="./origin/multimedia/img/favicon.png">
-        <script src="./origin/js/index.js" type="module" defer></script>
+        <script src="./origin/js/index.js" type="module" async></script>
         <title>Agregar personal</title>
     </head>
     <body>
@@ -27,8 +40,19 @@
                     <button class="text-slate-50">Andrés Mendoza</button>
                 </nav>
             </header>
-            <main class="pt-24 min-h-screen">
-
+            <main class="py-24  min-h-screen flex flex-col justify-center items-center">
+                <h1 class="text-5xl font-bold text-center">Agregar personal</h1>
+                <form class="box-shadow p-8 w-3/4 flex flex-col justify-center items-center rounded-xl sm:w-2/4" autocomplete="off">
+                    <label class="mb-2 font-bold">Apellido paterno:</label>
+                    <input class="mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" type="text" name="paternalSurname" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <label class="mb-2 font-bold">Apellido materno:</label>
+                    <input class="mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" type="text" name="maternalSurname" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <label class="mb-2 font-bold">Nombre(s):</label>
+                    <input class="mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" type="text" name="name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <label class="mb-2 font-bold">Ficha:</label>
+                    <input class="mb-8 p-3 rounded-xl outline-none border-1 border-gray-500 sm:w-7/12" type="text" name="file" pattern="^[0-9]$" required>
+                    <input class="w-3/4 p-3 rounded-xl bg-slate-900 text-slate-50 cursor-pointer sm:w-7/12" type="submit" value="Agregar">
+                </form>
             </main>
             <footer class="primary-color w-full p-5">
                 <p class="text-center text-slate-50">Pemex©</p>
