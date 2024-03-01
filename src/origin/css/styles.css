@@ -222,7 +222,7 @@ h1, h2 {
     font-family: "Mukta", "Tahoma";
 }
 
-label, p, span, input, select, button {
+label, p, span, input, select, button, a, th, td {
     font-family: "Montserrat", "Tahoma";
 }
 
@@ -236,11 +236,6 @@ html {
 }
 
 /*************************** Login ***************************/
-
-.form-login__input-text {
-    font-family: "Montserrat", "Tahoma";
-}
-
 .form-login__error {
     visibility: hidden;
     font-family: "Montserrat";

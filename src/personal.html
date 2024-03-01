@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./origin/css/styles.css">
+        <link rel="canonical" href="">
+        <link rel="icon" href="./origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="./origin/multimedia/img/favicon.png">
+        <script src="./origin/js/index.js" type="module" defer></script>
+        <title>Personal</title>
+    </head>
+    <body>
+        <noscript><h2>Es necesario que tengas habilitado JavaScript en tu navegador para acceder a esta página</h2></noscript>
+        <div class="root">
+            <header class="primary-color p-3 flex justify-between fixed top-0 left-0 w-full z-50">
+                <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
+
+                <nav class="flex justify-center items-center">
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="./seguimiento.html">Seguimiento</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="./cursos.html">Cursos</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="./personal.html">Personal</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Subir</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Check in</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Integración</a>
+                    <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Reclutamiento</a>
+                    <button class="text-slate-50">Andrés Mendoza</button>
+                </nav>
+            </header>
+            <main class="pt-24 min-h-screen">
+                <form class="form-filter min-h-72 w-full pt-6 border-b-1 fixed top-16 left-0 z-40 bg-slate-50 hidden" autocomplete="off">
+                    <div class="flex flex-col justify-center items-center">
+                        <label class="form-filter__label mb-2 font-bold">ID o título:</label>
+                        <input class="form-filter__input-text w-2/4 p-3 mb-8 outline-none border-1 border-gray-500 rounded-xl  md:w-3/12" type="text" name="id">
+                        <input class="form-filter__submit w-2/4 p-3 mb-8 text-slate-50 bg-slate-900 rounded-xl cursor-pointer  md:w-3/12" type="submit" value="Buscar">
+                        <input class="form-filter__clear w-2/4 p-3 mb-8 border-1 border-gray-500 rounded-xl cursor-pointer  md:w-3/12" type="button" value="Limpiar">
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="show-form-filter ml-4 cursor-pointer font-bold hover:text-sky-700">Ocultar filtros</span>
+                        <a class="mr-4 cursor-pointer font-bold hover:text-sky-700" href="./agregar-personal.html">Agregar personal</a>
+                    </div>
+                </form>
+                <div class="p-4 w-full border-b-1 bg-slate-50 fixed top-16">
+                    <span class="show-form-filter cursor-pointer font-bold hover:text-sky-700">Mostrar filtros</span>
+                </div>
+                <h1 class="text-5xl font-bold text-center">Personal</h1>
+                <div class="p-4 min-h-screen overflow-x-scroll">
+                    <table class="w-11/12 m-auto border-collaps">
+                        <thead>
+                            <tr>
+                                <th class="primary-color text-slate-50 p-4">Ficha</th>
+                                <th class="primary-color text-slate-50 p-4">Apellido paterno</th>
+                                <th class="primary-color text-slate-50 p-4">Apellido materno</th>
+                                <th class="primary-color text-slate-50 p-4">Nombre(s)</th>
+                                <th class="primary-color text-slate-50 p-4">RC</th>
+                                <th class="primary-color text-slate-50 p-4"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-slate-950">
+                                <td class="text-slate-50 text-center p-4" colspan="8">Febrero</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center p-4">asda</td>
+                                <td class="text-center p-4">Ramírez</td>
+                                <td class="text-center p-4">Mendoza</td>
+                                <td class="text-center p-4">César Andrés</td>
+                                <td class="text-center p-4">da9</td>
+                                <td class="text-center p-4 flex flex-col gap-2 justify-center items-center">
+                                    <button class="bg-slate-900 text-slate-50 w-full p-3 rounded-xl lg:w-3/4">Editar</button>
+                                    <button class="bg-slate-900 text-slate-50 w-full p-3 rounded-xl lg:w-3/4">Detalles</button>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-300">
+                                <td class="text-center p-4">llasndan</td>
+                                <td class="text-center p-4">oasdoisdjo</td>
+                                <td class="text-center p-4">a;sdpm</td>
+                                <td class="text-center p-4">;akskndlkas</td>
+                                <td class="text-center p-4">asnksnl</td>
+                                <td class="text-center p-4 flex flex-col gap-2 justify-center items-center">
+                                    <button class="bg-slate-900 text-slate-50 w-full p-3 rounded-xl lg:w-3/4">Editar</button>
+                                    <button class="bg-slate-900 text-slate-50 w-full p-3 rounded-xl lg:w-3/4">Detalles</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+    
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </main>
+            <footer class="primary-color w-full p-5">
+                <p class="text-center text-slate-50">Pemex©</p>
+            </footer>
+        </div>
+    </body>
+</html>
