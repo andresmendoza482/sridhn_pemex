@@ -26,7 +26,7 @@
     <body>
         <noscript><h2>Es necesario que tengas habilitado JavaScript en tu navegador para acceder a esta página</h2></noscript>
         <div class="root">
-            <header class="primary-color p-3 flex justify-between fixed top-0 left-0 w-full z-50">
+            <header class="primary-color p-3 flex justify-between fixed top-0 left-0 w-full z-40">
                 <img class="w-40" src="./origin/multimedia/img/logo.svg" title="Pemex" alt="Pemex">
 
                 <nav class="flex justify-center items-center">
@@ -37,7 +37,7 @@
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Check in</a>
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Integración</a>
                     <a class="text-slate-50 opacity-80 mr-3 hover:opacity-100" href="#">Reclutamiento</a>
-                    <button class="text-slate-50">Andrés Mendoza</button>
+                    <button class="btn-user text-slate-50">Andrés Mendoza</button>
                 </nav>
                 <!--MOBILE
                     <button class="">X</button>
@@ -61,7 +61,7 @@
                 -->
             </header>
             <main class="pt-24">
-                <form class="form-filter pt-6 border-b-1 fixed top-16 left-0 z-40 bg-slate-50 hidden" autocomplete="off">
+                <form class="form-filter pt-6 border-b-1 fixed top-16 left-0 z-30 bg-slate-50 hidden" autocomplete="off">
                     <div class="flex flex-wrap">
                         <div class="flex flex-col w-1/2 items-center md:w-1/3">
                             <label class="form-filter__label mb-2 font-bold">Encontrar:</label>
@@ -124,7 +124,7 @@
                 </div>
                 <h1 class="text-5xl font-bold text-center">Cursos</h1>
                 <div class="p-4 min-h-screen overflow-x-scroll">
-                    <table class="w-11/12 m-auto border-collaps">
+                    <table class="w-11/12 m-auto border-collaps border border-slate-900">
                         <thead>
                             <tr>
                                 <th class="primary-color text-slate-50 p-4">ID</th>
@@ -149,7 +149,7 @@
                                 <td class="text-center p-4">asnksnl</td>
                                 <td class="text-center p-4">klasndlknsa</td>
                                 <td class="text-center p-4">laksndlkn</td>
-                                <td class="text-center p-4"><button class="bg-slate-900 text-slate-50 p-3 rounded-xl">Detalles</button></td>
+                                <td class="text-center p-4"><a class="block bg-slate-900 text-slate-50 p-3 rounded-xl" href="./detalles.html">Detalles</a></td>
                             </tr>
                             <tr class="bg-gray-300">
                                 <td class="text-center p-4">llasndan</td>
@@ -326,12 +326,16 @@
                       </table>  
                 </div>
 
-                <div class="modal fixed top-0 left-0 w-full h-screen bg-modal flex justify-center items-center invisible">
-                    <div class="modal-container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
-                        <h2 class="modal-container__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
-                        <button class="modal-container__btn w-3/4 p-3 mb-8 rounded-xl bg-slate-900 text-slate-50 outline-none sm:w-7/12">Cerrar</button>
-                        <button class="modal-container__btn w-3/4 p-3 rounded-xl border-1 border-gray-500 cursor-pointer sm:w-7/12">Cancelar</button>
+                <div class="modal-logout fixed top-0 left-0 z-50 w-full h-screen bg-modal flex justify-center items-center invisible">
+                    <div class="modal-logout__container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
+                        <h2 class="modal-logout__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
+                        <button class="modal-logout__btn-logout w-3/4 p-3 mb-8 rounded-xl bg-slate-900 text-slate-50 outline-none sm:w-7/12">Cerrar</button>
+                        <button class="modal-logout__btn-cancel w-3/4 p-3 rounded-xl border-1 border-gray-500 cursor-pointer sm:w-7/12">Cancelar</button>
                     </div>
+                </div>
+                <div class="bg-slate-50 fixed top-20 right-4 p-8 flex flex-col justify-center items-center gap-8 box-shadow rounded-xl invisible">
+                    <p class="font-bold">Andrés Mendoza</p>
+                    <button class="bg-slate-900 text-slate-50 p-3 rounded-xl">Logout</button>
                 </div>
             </main>
             <footer class="primary-color w-full p-5">

@@ -1,5 +1,5 @@
-const $modalLogout = document.querySelector(".modal");
-const $modalUser = document.querySelector(".header-container__user-menu");
+const $modalLogout = document.querySelector(".modal-logout");
+const $modalUser = document.querySelector(".modal-user");
 
 //PROGRAMACION DE MODALES
 
@@ -8,11 +8,11 @@ const modal = () => {
         document.addEventListener("click", (event) => {
             const element = event.target;//El elemento que origina el evento es asigando a una constante.
     
-            if(element.matches(".header-container__logout")) {
-                $modalLogout.classList.add("is-visible");
+            if(element.matches(".btn-user")) {
+                $modalLogout.classList.remove("invisible");
 
-            }else if(element.matches(".modal-container__btn--cancel")) {
-                $modalLogout.classList.remove("is-visible");
+            }else if(element.matches(".modal-logout__btn-cancel")) {
+                $modalLogout.classList.add("invisible");
             }
         }) 
 
@@ -22,10 +22,10 @@ const modal = () => {
         document.addEventListener("click", (event) => {
             const element = event.target;
 
-            if(element.matches(".header-container__user-btn")) {
-                console.log("to flama");
-                $modalUser.classList.add("is-visible");
-            }else if(!(element.matches(".header-container__user-menu") || element.matches(".header-container__user-menu *")) || element.matches(".header-container__logout")) {
+            if(element.matches(".btn-user")) {
+                $modalUser.classList.remove("invisible");
+
+            }else if(!(element.matches(".btn-user") || element.matches(".header-container__user-menu *")) || element.matches(".header-container__logout")) {
                 $modalUser.classList.remove("is-visible");
             }
 
