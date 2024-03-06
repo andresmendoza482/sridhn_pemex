@@ -11,6 +11,12 @@ const $sectionAdh = document.querySelector(".section-adh");
 const $sectionManagment = document.querySelector(".section-managment");
 const $sectionPartTime = document.querySelector(".section-parttime");
 
+//Variables de la programación de la sección detalles.
+const $showAttributes = document.querySelector(".show-section-attributes");
+const $showOfficials = document.querySelector(".show-section-officials");
+const $sectionAttributes = document.querySelector(".section-attributes");
+const $sectionOfficials = document.querySelector(".section-officials");
+
 const showSections = () => {
     if($formFilter) {//Si existe el formulario de filtro ejecuta la siguiente programación.
         document.addEventListener("click", event => {
@@ -93,6 +99,38 @@ const showSections = () => {
                 
             }
         });
+    }
+
+    if($sectionAttributes) {
+        document.addEventListener("click", event => {
+            const element = event.target;
+
+            if(element.matches(".show-section-attributes") && !$sectionAttributes.classList.contains("hidden")){
+                $showAttributes.textContent = "Mostrar sección";
+                $sectionAttributes.classList.add("hidden");
+
+            }else if (element.matches(".show-section-attributes") && $sectionAttributes.classList.contains("hidden")) {
+                $showAttributes.textContent = "Ocultar sección";
+                $sectionAttributes.classList.remove("hidden");
+            }
+
+        });
+    }
+
+    if($sectionOfficials) {
+        document.addEventListener("click", event => {
+            const element = event.target;
+
+            if(element.matches(".show-section-officials") && !$sectionOfficials.classList.contains("hidden")) {
+                $showOfficials.textContent = "Mostrar sección";
+                $sectionOfficials.classList.add("hidden");
+
+            }else if(element.matches(".show-section-officials") && $sectionOfficials.classList.contains("hidden")) {
+                $showOfficials.textContent = "Ocultar sección";
+                $sectionOfficials.classList.remove("hidden");
+
+            }
+        })
     }
 };
 

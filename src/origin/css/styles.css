@@ -39,6 +39,7 @@ h1 {
 
 h1, h2 {
     font-family: "Mukta", "Tahoma";
+    transform: translateY();
 }
 
 label, p, span, input, select, button, a, th, td, caption {
@@ -79,6 +80,10 @@ html {
 
 .bg-modal {
     background-color: rgba(1, 1, 1, 0.8);
+}
+
+.z-49 {
+    z-index: 49;
 }
 
 /*

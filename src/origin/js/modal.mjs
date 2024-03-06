@@ -4,35 +4,35 @@ const $modalUser = document.querySelector(".modal-user");
 //PROGRAMACION DE MODALES
 
 const modal = () => {
-    if ($modalLogout) {//Si existe una ventana modal ejecuta la siguiente programación.
+    if ($modalUser) {//Si existe la ventana modal de usuario ejecuta la siguiente programación.
         document.addEventListener("click", (event) => {
             const element = event.target;//El elemento que origina el evento es asigando a una constante.
     
             if(element.matches(".btn-user")) {
-                $modalLogout.classList.remove("invisible");
+                $modalUser.classList.remove("invisible");
 
-            }else if(element.matches(".modal-logout__btn-cancel")) {
-                $modalLogout.classList.add("invisible");
+            }else if(!(element.matches(".modal-user") || element.matches(".modal-user *"))) {
+                $modalUser.classList.add("invisible");
             }
         }) 
 
     }
 
-    if($modalUser) {
+    if($modalLogout) {//Si existe la ventana modal de logout se ejecuta la siguiente programación.
         document.addEventListener("click", (event) => {
-            const element = event.target;
+            const element = event.target;//El elemento que origina el evento es asigando a una constante.
 
-            if(element.matches(".btn-user")) {
-                $modalUser.classList.remove("invisible");
+            if(element.matches(".btn-logout")) {
+                $modalUser.classList.add("invisible");
+                $modalLogout.classList.remove("invisible");
 
-            }else if(!(element.matches(".btn-user") || element.matches(".header-container__user-menu *")) || element.matches(".header-container__logout")) {
-                $modalUser.classList.remove("is-visible");
+            }else if(element.matches(".modal-logout__btn-cancel")) {
+                $modalLogout.classList.add("invisible");
             }
 
         });
     }
 
-    //HACE FALTA LA FUNCIONALIDAD DEL BOTON DE CIERRE DE SESION QUE REDIRIJAN A LOGIN.
 };
 
 

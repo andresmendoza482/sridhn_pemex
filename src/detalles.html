@@ -44,8 +44,8 @@
                 <h1 class="text-5xl font-bold text-center">Detalles del curso: 1509</h1>
 
                 <h2 class="text-3xl font-bold text-center">Atributos.</h2>
-                <button class="show-section-atributes block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
-                <div class="section-atributes">
+                <button class="show-section-attributes block mx-auto my-4 cursor-pointer font-bold hover:text-sky-700">Ocultar sección</button>
+                <div class="section-attributes">
                     <table class="w-11/12 m-auto border-collaps border border-slate-900">
                         <tbody>
                             <tr>
@@ -214,11 +214,21 @@
                         </tbody>
                     </table>
                 </div>
-                <hr>
                 
                                     
                 <div class="fixed top-0 left-0 w-full h-screen bg-slate-50 translate-y-full transition-transform">
 
+                </div>
+                <div class="modal-logout fixed top-0 left-0 z-50 w-full h-screen bg-modal flex justify-center items-center invisible">
+                    <div class="modal-logout__container p-8 bg-slate-50 rounded-xl w-3/4 min-h- flex flex-col justify-center items-center sm:w-2/4 lg:w-5/12">
+                        <h2 class="modal-logout__h2 mb-4 text-3xl text-center font-bold lg:mb-8">¿Estás seguro de que quieres cerrar la sesión?</h2>
+                        <button class="modal-logout__btn-logout w-3/4 p-3 mb-8 rounded-xl bg-slate-900 text-slate-50 outline-none sm:w-7/12">Cerrar</button>
+                        <button class="modal-logout__btn-cancel w-3/4 p-3 rounded-xl border-1 border-gray-500 cursor-pointer sm:w-7/12">Cancelar</button>
+                    </div>
+                </div>
+                <div class="modal-user bg-slate-50 fixed top-20 right-4 z-49 p-8 flex flex-col justify-center items-center gap-8 box-shadow rounded-xl invisible">
+                    <p class="font-bold">Andrés Mendoza</p>
+                    <button class="btn-logout bg-slate-900 text-slate-50 p-3 rounded-xl">Logout</button>
                 </div>
             </main>
             <footer class="primary-color w-full p-5">
